@@ -1,29 +1,22 @@
-const filterByAge = () => {
-  // your code
+const filterByAge = (array) => array.age < 50;
+
+const filterByScore = (array) => array.score > 75;
+
+const filterByServiceRecord = (array) => array.serviceRecord > 5;
+
+const sortByScore = (candidates) => [...candidates].sort((a, b) => b.score - a.score);
+
+const getMeanAge = (candidates) => {
+let sum = 0;
+candidates.forEach(el => { sum += el.age});
+return sum / candidates.length;
 };
 
-const filterByScore = () => {
-  // your code
-};
+const getMeanAgeReduce = (candidates) => 
+  candidates.reduce((a, b) => (a + b.age),0)/candidates.length;
 
-const filterByServiceRecord = () => {
-  // your code
-};
-
-const sortByScore = () => {
-  // your code
-};
-
-const getMeanAge = () => {
-  // your code
-};
-
-const getMeanAgeReduce = () => {
-  // your code
-};
-
-const getNameOnly = () => {
-  // your code
+const getNameOnly = (el) => {
+ return el.name
 };
 
 module.exports = {
